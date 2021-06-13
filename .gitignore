@@ -1,0 +1,6 @@
+data
+production-model-package/regression_model/data/*
+deploying_ml_env/*
+*.code-workspace
+__pycache__
+.vscode 

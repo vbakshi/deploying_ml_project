@@ -1,0 +1,77 @@
+package_name: regression_model
+
+training_data_file: train.csv
+test_data_file: test.csv 
+
+target: SalePrice
+
+test_size: 0.1
+random_state: 0
+features:
+  - MSSubClass
+  - MSZoning
+  - Neighborhood
+  - OverallQual
+  - OverallCond
+  - YearRemodAdd
+  - RoofStyle
+  - MasVnrType
+  - BsmtQual
+  - BsmtExposure
+  - HeatingQC
+  - CentralAir
+  - 1stFlrSF
+  - GrLivArea
+  - BsmtFullBath
+  - KitchenQual
+  - Fireplaces
+  - FireplaceQu
+  - GarageType
+  - GarageFinish
+  - GarageCars
+  - PavedDrive
+  - LotFrontage
+  - YrSold
+  
+categorical_features:
+  - MSZoning
+  - Neighborhood
+  - RoofStyle
+  - MasVnrType
+  - BsmtQual
+  - BsmtExposure
+  - HeatingQC
+  - CentralAir
+  - KitchenQual
+  - FireplaceQu
+  - GarageType
+  - GarageFinish
+  - PavedDrive
+
+numerical_features:
+  - 1stFlrSF
+  - GrLivArea
+  - LotFrontage
+
+discrete_features:
+  - MSSubClass
+  - OverallQual
+  - OverallCond
+  - BsmtFullBath
+  - Fireplaces
+  - GarageCars
+
+temporal_features:
+  - YearRemodAdd
+  - YrSold
+
+categorical_features_with_missing:
+  - MasVnrType
+  - BsmtQual
+  - BsmtExposure 
+  - FireplaceQu
+  - GarageType
+  - GarageFinish
+
+numerical_features_with_missing:
+  - LotFrontage

@@ -10,12 +10,13 @@ from sklearn.linear_model import Lasso
 
 from sklearn.metrics import mean_squared_error , r2_score
 from math import sqrt 
+from regression_model.config.core import DATASET_DIR
 
 import joblib
 
 
-def load_data(path):
-    return pd.read_csv(path, index_col=0)
+def load_data(file_name:str) -> pd.DataFrame:
+    return pd.read_csv(f"{DATASET_DIR}/{file_name}", index_col=0)
 
 
 def divide_train_test(data, target):
@@ -78,7 +79,3 @@ def score(true_labels, predictions):
 
     return mse, rmse, r2
     
-
-
-
-
