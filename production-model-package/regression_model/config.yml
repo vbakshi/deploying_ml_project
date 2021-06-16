@@ -5,6 +5,9 @@ test_data_file: test.csv
 
 target: SalePrice
 
+pipeline_name: regression_model 
+pipeline_save_file: regression_model_output_v
+
 test_size: 0.1
 random_state: 0
 features:
@@ -32,7 +35,7 @@ features:
   - PavedDrive
   - LotFrontage
   - YrSold
-  
+
 categorical_features:
   - MSZoning
   - Neighborhood
