@@ -40,6 +40,7 @@ class ModelConfig(BaseModel):
     temporal_features: List[str]
     categorical_features_with_missing: List[str]
     numerical_features_with_missing: List[str]
+    features_to_rename: dict
 
 
 class Config(BaseModel):

@@ -10,6 +10,7 @@ pipeline_save_file: regression_model_output_v
 
 test_size: 0.1
 random_state: 0
+
 features:
   - MSSubClass
   - MSZoning
@@ -23,7 +24,7 @@ features:
   - BsmtExposure
   - HeatingQC
   - CentralAir
-  - 1stFlrSF
+  - FirstFlrSF
   - GrLivArea
   - BsmtFullBath
   - KitchenQual
@@ -52,7 +53,7 @@ categorical_features:
   - PavedDrive
 
 numerical_features:
-  - 1stFlrSF
+  - FirstFlrSF
   - GrLivArea
   - LotFrontage
 
@@ -78,3 +79,6 @@ categorical_features_with_missing:
 
 numerical_features_with_missing:
   - LotFrontage
+
+features_to_rename:
+  1stFlrSF: FirstFlrSF

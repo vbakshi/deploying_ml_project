@@ -10,7 +10,9 @@ from regression_model import __version__ as _version
 import joblib
 
 def load_data(*, data_file_name: str) -> pd.DataFrame:
-    return pd.read_csv(f"{DATASET_DIR}/{data_file_name}", index_col=0)
+    dataframe = pd.read_csv(f"{DATASET_DIR}/{data_file_name}", index_col=0)
+    dataframe_final = dataframe.rename(columns=config.model_config.features_to_rename)
+    return dataframe_final
 
 def save_pipeline(*, pipeline_to_save: Pipeline) -> None:
 
